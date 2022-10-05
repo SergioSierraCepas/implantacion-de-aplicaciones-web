@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <style>
+            input{
+                margin-bottom: 3px;
+            }
+            #un{
+                padding-left: 123px;
+            }
+            #dos{
+                padding-left: 92px;
+            }
+            #tres{
+                padding-left: 87px;
+            }
+            #cuatro{
+                padding-left:82px ;
+            }
+            #nom{
+                padding-left :50px;
+                
+
+            }
+            #ape1{
+                padding-left: 30px;
+                
+            }
+            #ape2{
+                padding-left: 25px;
+                
+            }
+            #cor{
+                padding-left: 20px;
+                
+            }
+            #ss{
+                width: 177px;
+                
+            }
+            form{
+                border: black solid 5px;
+                background-color: yellow;
+                padding: 2px;
+            }
+            h1{
+                background-color: rgb(231, 116, 8);
+                font-family:'Times New Roman', Times, serif;
+                color: blue;
+                width: 60%;
+            }
+            #s1{
+                width: 70px;
+                margin-right: 2px;
+               
+            }
+            #s2{
+                width: 35px;
+               
+                
+            }
+        </style>
+        <script>
+            function comprobar(){
+                email=document.getElementById("correo").value;
+            if(document.getElementById("nombre").value.length==0){
+                alert("el nombre no se ha rellenado")
+                document.getElementById("nom").focus
+            }
+            if(document.getElementById("apellido1").value.length==0){
+                alert("el primer apellido no se ha rellenado")
+                document.getElementById("nom").focus
+            }
+            if(document.getElementById("apellido2").value.length==0){
+                alert("el segundo apellido no se ha rellenado")
+                document.getElementById("nom").focus
+            }
+            if(email.indexOf("@")==-1){
+                alert("el correo no tiene el formato correcto")
+                email.focus
+            }
+            if(document.getElementById("s1").value.length>7){
+                alert("ingrese un primer numero de la seguridad social mas pequeño ")
+            }
+            if(document.getElementById("s2").value.length>2){
+                alert("ingrese un segundo numero de la seguridad social mas pequeño ")
+            }
+        }
+        function borrar(){
+            
+            document.getElementById("nombre").value=""
+            document.getElementById("apellido1").value=""
+            document.getElementById("apellido2").value=""
+            document.getElementById("correo").value=""
+            document.getElementById("s1").value=""
+            document.getElementById("s2").value=""
+
+        }
+            
+        </script>
+
+    </head>
+    <body>
+        <h1>Solicitud del Informe de Vida Laboral</h1>
+        <form name="form">
+            
+            <span id="nom"><strong>Nombre:</strong></span><span id="un"><input type="text" name="name" id="nombre"></span><br>
+            <span id="ape1"><strong>Primer apellido:</strong></span><span id="dos"><input type="text" name="ape1" id="apellido1"></span><br>
+            <span id="ape2"><strong>Segundo apellido:</strong></span><span id="tres"><input type="text" name="ape2" id="apellido2"></span><br>
+            <span id="cor"><strong>Correo electronico:</strong></span><span id="cuatro"><input type="text" name="correo" id="correo"></span><br>
+            <strong>Numero afiliado seguridad social:</strong><span id="5">
+                <select id="ss">
+                    <option>A Coruña</option>
+                    <option>Madrid</option>
+                    <option>Barcelona</option>
+                </select>
+                / <input type="text"  id="s1"></span>/ <input type="text" id="s2"><br> 
+        </form>
+        <input type="button" name="enviar" value="enviar" onclick="comprobar()">
+        <input type="button" name="borrar" value="borrar" onclick="borrar()">
+    </body>
+</html>

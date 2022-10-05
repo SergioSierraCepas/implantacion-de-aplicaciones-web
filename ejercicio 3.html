@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function correccion(){
+                var nota=parseInt(0)
+                
+                if (document.form1.iaw[2].checked){
+                    nota=nota+parseInt(1)
+                    
+                }
+                if(document.form2.bbdd[3].checked){
+                    nota=nota+parseInt(1)
+                }
+                if(document.form3.sd[0].checked){
+                    nota=nota+parseInt(1)
+                }
+                if(document.form4.ing[0].checked){
+                    nota=nota+parseInt(1)
+                }
+                alert("tienes un 4/"+nota)
+
+            }
+        </script>
+        <style>
+            form{
+                background-color: rgb(184, 171, 154);
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 60%;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="form1">
+            <p>quien imparte el modulo de implantacion de aplicaciones web</p>
+            <br>
+
+            <input type="radio" name="iaw">Samuel
+
+            <br>
+            <input type="radio" name="iaw">Carlos
+
+            <br>
+            <input  type="radio" name="iaw">Jose
+
+            <br>
+            <input type="radio" name="iaw">Luis Maria
+
+        </form>
+
+
+        <form name="form2">
+            <p>quien imparte el modulo de administracion de base de datos</p>
+            <br>
+
+            <input type="radio" name="bbdd">Carlos
+
+            <br>
+            <input type="radio" name="bbdd">Samuel
+
+            <br>
+            <input type="radio" name="bbdd">Luis Maria
+
+            <br>
+            <input type="radio" name="bbdd">Jose
+            
+        </form>
+
+
+        <form name="form3">
+            <p>quien imparte el modulo de Seguridad y alta disponibilidad </p>
+            <br>
+
+            <input type="radio" name="sd">Samuel
+
+            <br>
+            <input type="radio" name="sd">Carlos
+
+            <br>
+            <input type="radio" name="sd">Jose
+
+            <br>
+            <input type="radio" name="sd">Luis Maria
+            
+        </form>
+
+
+        <form name="form4">
+            <p>Quien imparte el modulo de ingles Tecnico</p>
+            <br>
+
+            <input type="radio" name="ing">Maria
+
+            <br>
+            <input type="radio" name="ing">Luis maria
+
+            <br>
+            <input type="radio" name="ing">Jose
+
+            <br>
+            <input type="radio" name="ing">Carlos
+            
+        </form>
+        <input type="button" value="siguiente" onclick="correccion()">
+
+
+    </body>
+
+
+
+</html>

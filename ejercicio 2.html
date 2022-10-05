@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function cambiar(){
+                var costo=parseInt(12000)
+                if(document.form1.motor[1].checked){
+                    var diesel=parseInt(1500)
+                    costo=costo+diesel
+                    
+                   
+                }
+                if(document.form1.motor[2].checked){
+                    var Hibrido=parseInt(3000)
+                    costo=costo+Hibrido
+                    
+                }
+
+                if(document.form2.puerta[0].checked && document.form1.motor[0].checked){
+                    var puertas=parseInt(2000)
+                    costo=costo-puertas
+                    
+                }
+                
+                if(document.form2.puerta[2].checked){
+                    var fam=parseInt(1500)
+                    costo=costo+fam
+                }
+                if (document.form3.pintura[3].checked){
+                    var pint=parseInt(500)
+                    costo=costo - pint
+                }
+                if (document.form3.pintura[4].checked){
+                    var negr=parseInt(600)
+                    costo=costo-negr
+                }
+                if (document.form4.rest[0].checked && (document.form4.rest[0].checked || document.form4.rest[1].checked|| document.form4.rest[0].checked)){
+                    var met=parseInt(750)
+                    costo=costo+met
+                }
+                if (document.form4.rest[1].checked){
+                    var llant=parseInt(200)
+                    costo=costo+llant
+                }
+                if (document.form4.rest[2].checked){
+                    var clim=parseInt(800)
+                    costo=costo+clim
+                }
+                if (document.form4.rest[3].checked){
+                    var gps=parseInt(340)
+                    costo=costo+gps
+                }
+                if (document.form4.rest[4].checked && document.form2.puerta[2].checked){
+                    var dvd=parseInt(800)
+                    costo=costo+dvd
+                }
+
+                alert(costo)
+                
+
+
+            }
+            </script>
+            <style>
+                div{
+                    border: 1px solid black;
+                }
+                form{
+                    border: 1px solid black;
+                    margin-top: 3px;
+                    margin-bottom: 3px;
+                }
+
+                </style>
+    </head>
+    <body>
+        <div>
+            <div>configuracion del coche</div>
+
+                        <form name="form1">tipo de motor <br>
+                        <input type="radio"   name="motor"> gasolina
+                        <input type="radio"  name="motor">Diesel(+1500)
+                        <input type="radio"  name="motor">Hibrido(+3000E)
+                        </form>
+                        
+                        
+                            <form name="form2">tipo de puertas<br>
+                            <input type="radio"  name="puerta">3 puertas(-2000e)(solo con gasolina)
+                            <input type="radio"  name="puerta">5puertas
+                            <input type="radio" name="puerta">Familiar(+1500E)
+                            </form>
+                            
+                           
+                                <form name="form3">tipo de pintura<br>
+                                <input type="radio"  name="pintura">rojo
+                                <input type="radio"  name="pintura">verde
+                                <input type="radio"  name="pintura">naranja
+                                <input type="radio"  name="pintura">blanco(-500E)
+                                <input type="radio"  name="pintura">negro(-600E)
+                            </form>
+                          
+                            
+                        
+                                
+                                    <form name="form4">seleccione las que desee:<br>
+                                    <input type="checkbox"  name="rest">metalizada(+750E)(solo rojo,verde o naranja)<br>
+                                    <input type="checkbox" name="rest">llantas(+200E)<br>
+                                    <input type="checkbox" name="rest">climatizador(+800E)<br>
+                                    <input type="checkbox" name="rest">gps(+340E)<br>
+                                    <input type="checkbox" name="rest">dvd(+800E)(solo modelo familiar)<br>
+                                    </form>
+                               
+                           
+                              
+                                    <div>total a cobrar<br>
+                                    <input type="button" value="calcular" onclick="cambiar()"> </div>
+                            
+            </div>
+    </body>
+</html>

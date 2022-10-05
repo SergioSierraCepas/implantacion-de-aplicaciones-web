@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script>
+
+            function texto(){
+                var cambiar=document.getElementById("text")
+                 var text2=prompt("introduzca el texto")
+                cambiar.value=""
+                cambiar.innerHTML=text2
+            }
+            
+            function pintar(){
+                var color=prompt("escribe un color en ingles")
+                document.getElementById("cuadrado").style.backgroundColor=color
+            }
+            function ambas(){
+                var letra=prompt("escribe la fuente deseada")
+                var color2=prompt("escribe el color en ingles")
+                document.getElementById("text").style.fontFamily=letra
+                document.getElementById("text").style.color=color2
+            }
+        </script>
+        <style>
+            #cuadrado{
+                border: 3px solid black;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="cuadrado"><p id="text">este es el contenido</p></div>
+        <input type="button" value="cambiar texto" onclick="texto()">
+        <input type="button" value="cambiar fondo" onclick="pintar()">
+        <input type="button" value="cambiar texto y letra" onclick="ambas()">
+    </body>
+</html>
